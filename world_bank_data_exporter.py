@@ -69,12 +69,13 @@ def orient_dfs(dfs):
 
 
 def main():
-    cwd = os.getcwd()
+    cwd = os.getcwd() + '/data'
+    print(cwd)
     pandas_list = []
     for file in os.listdir(cwd):
         if file.endswith(".xls"):
             print(file)
-            pandas_list.append(pd.read_excel(file))
+            pandas_list.append(pd.read_excel("data/" + file))
 
     df = orient_dfs(pandas_list)
 
