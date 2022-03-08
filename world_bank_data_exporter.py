@@ -78,7 +78,6 @@ def main():
             pandas_list.append(pd.read_excel("data/" + file))
 
     df = orient_dfs(pandas_list)
-
     df.to_excel("world_bank_stata.xlsx")
 
 
